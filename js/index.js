@@ -56,10 +56,45 @@ for (let i = 0; i < navAnchors.length; i++) {
 //CTA Section
 let ctaHeading = document.querySelector("h1");
 ctaHeading.textContent = "DOM IS AWESOME";
-console.log(ctaHeading);
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = "Get Started";
 
 let ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"];
+
+//Main Content
+
+let main = document.querySelector(".main-content");
+let mainHeadings = main.querySelectorAll("h4");
+let mainParagraphs = main.querySelectorAll("p");
+
+mainHeadings[0].textContent = siteContent["main-content"]["features-h4"];
+mainParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+
+mainHeadings[1].textContent = siteContent["main-content"]["about-h4"];
+mainParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+
+mainHeadings[2].textContent = siteContent["main-content"]["services-h4"];
+mainParagraphs[2].textContent = siteContent["main-content"]["services-content"];
+
+mainHeadings[3].textContent = siteContent["main-content"]["product-h4"];
+mainParagraphs[3].textContent = siteContent["main-content"]["product-content"];
+
+mainHeadings[4].textContent = siteContent["main-content"]["vision-h4"];
+mainParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+let mainImg = document.querySelector("#middle-img");
+mainImg.src = siteContent["main-content"]["middle-img-src"];
+
+//Contact Content
+let contact = document.querySelector(".contact").children;
+
+contact[0].textContent = siteContent.contact["contact-h4"];
+contact[1].textContent = siteContent.contact["address"];
+contact[2].textContent = siteContent.contact["phone"];
+contact[3].textContent = siteContent.contact["email"];
+
+//Footer Content
+let footer = document.querySelector("footer").querySelector("p");
+footer.textContent = siteContent.footer.copyright;
