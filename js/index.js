@@ -54,6 +54,17 @@ for (let i = 0; i < navAnchors.length; i++) {
   navAnchors[i].style.color = "green";
 }
 
+let nav = document.querySelector("nav");
+let a1 = document.createElement("a");
+let textContent1 = document.createTextNode("Careers");
+a1.appendChild(textContent1);
+let a2 = document.createElement("a");
+let textContent2 = document.createTextNode("Locations");
+a2.appendChild(textContent2);
+
+nav.appendChild(a1).style.color = "green";
+nav.appendChild(a2).style.color = "green";
+
 //CTA Section
 let ctaHeading = document.querySelector("h1");
 ctaHeading.textContent = "DOM IS AWESOME";
