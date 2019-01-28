@@ -51,6 +51,7 @@ logo.setAttribute("src", siteContent.nav["img-src"]);
 let navAnchors = document.getElementsByTagName("a");
 for (let i = 0; i < navAnchors.length; i++) {
   navAnchors[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+  navAnchors[i].style.color = "green";
 }
 
 //CTA Section
