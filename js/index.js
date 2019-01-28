@@ -62,8 +62,12 @@ let a2 = document.createElement("a");
 let textContent2 = document.createTextNode("Locations");
 a2.appendChild(textContent2);
 
-nav.appendChild(a1).style.color = "green";
-nav.appendChild(a2).style.color = "green";
+let newAnchor1 = nav.appendChild(a1);
+let newAnchor2 = nav.appendChild(a2);
+newAnchor1.setAttribute("href", "#");
+newAnchor2.setAttribute("href", "#");
+newAnchor1.style.color = "green";
+newAnchor2.style.color = "green";
 
 //CTA Section
 let ctaHeading = document.querySelector("h1");
