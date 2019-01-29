@@ -8,6 +8,7 @@ window.onload = function() {
   let secondOnes = document.querySelector("#secondOnes");
   let msHundreds = document.querySelector("#msHundreds");
   let msTens = document.querySelector("#msTens");
+  let colon = document.querySelector("#colon");
 
   const startPause = () => {
     if (running === 0) {
@@ -32,6 +33,7 @@ window.onload = function() {
     msHundreds.style.color = "black";
     msTens.textContent = 0;
     msTens.style.color = "black";
+    colon.style.color = "black";
     startBtn.textContent = "Start";
     startBtn.disabled = false;
     setTimeout(() => {
@@ -46,7 +48,7 @@ window.onload = function() {
           secondTens.textContent = 0;
           secondOnes.textContent = 0;
         }
-        if (milliseconds <= 999) {
+        if (milliseconds <= 990) {
           milliseconds += 10;
           let milliChange = milliseconds.toString();
 
@@ -70,6 +72,7 @@ window.onload = function() {
             msHundreds.style.color = "red";
             msTens.textContent = 0;
             msTens.style.color = "red";
+            colon.style.color = "red";
             startBtn.disabled = true;
             startBtn.textContent = "Done!";
             return;
